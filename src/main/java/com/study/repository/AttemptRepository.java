@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface AttemptRepository extends JpaRepository<Attempt, Long> {
 
-    @Query(value = "select x.attemptid, x.success, x.ts, x.login, x.wordid" +
+    @Query(value = "select x.attempt_id, x.success, x.ts, x.login, x.word_id" +
             "         from" +
             "       (" +
             "        select a.*, row_number() over(partition by login order by ts desc) as rn" +

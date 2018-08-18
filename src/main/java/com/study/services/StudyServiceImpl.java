@@ -11,7 +11,7 @@ import com.study.services.translator.SubtitlesParserInterface;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -252,17 +252,14 @@ class StudyServiceImpl implements StudyServiceInterface {
         return modes;
     }
 
-    /*
     private org.springframework.security.core.userdetails.User getAuthorizedUser() {
         return (org.springframework.security.core.userdetails.User)
                 SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
-    */
 
     @Override
     public User getCurrentUser() {
-        //return userRepository.findById(getAuthorizedUser().getUsername()).get();
-        return userRepository.findById("serhii").get();
+        return userRepository.findById(getAuthorizedUser().getUsername()).get();
     }
 
 
