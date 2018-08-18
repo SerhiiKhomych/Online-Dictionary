@@ -103,8 +103,6 @@
                     <artifactId>maven-war-plugin</artifactId>
                     <configuration>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
-                        <outputDirectory>target</outputDirectory>
-                        <warName>ROOT</warName>
                     </configuration>
                 </plugin>
                 <plugin>
