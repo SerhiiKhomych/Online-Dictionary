@@ -1,12 +1,14 @@
 package com.study.repository;
 
 import com.study.pojo.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class UserRepositoryImpl implements UserRepository {
     private Map<String, User> users = new HashMap<>();
 
@@ -16,8 +18,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User findByUsername(String username) {
-        return users.get(username);
+    public User findByLogin(String login) {
+        return users.get(login);
     }
 
     @Override

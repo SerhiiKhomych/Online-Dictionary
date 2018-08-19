@@ -15,14 +15,14 @@ import java.util.Set;
 public interface HistoryRepository extends JpaRepository<History, Long> {
 
     @Query("SELECT h FROM History h LEFT JOIN FETCH h.word " +
-            "WHERE h.user.login = :login " +
+            "WHERE h.login = :login " +
             "AND h.repetitionMode = :repetitionMode " +
             "AND h.word.category in :categories")
     List<History> findAll(@Param("login") String login, @Param("repetitionMode") RepetitionMode repetitionMode,
                           @Param("categories") Set<Category> categories);
 
     @Query("SELECT h FROM History h " +
-            "WHERE h.user.login = :login " +
+            "WHERE h.login = :login " +
             "AND h.repetitionMode = :repetitionMode " +
             "AND h.word.wordId = :wordId")
     History find(@Param("wordId") long wordId, @Param("login") String login,
@@ -31,7 +31,7 @@ public interface HistoryRepository extends JpaRepository<History, Long> {
     @Modifying
     @Transactional
     @Query("DELETE FROM History h " +
-            "WHERE h.user.login = :login " +
+            "WHERE h.login = :login " +
             "AND h.word.wordId = :wordId")
     void delete(@Param("wordId") long wordId, @Param("login") String login);
 }

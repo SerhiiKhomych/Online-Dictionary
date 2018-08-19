@@ -13,10 +13,8 @@ public class History {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long historyId;
 
-    @AttributeOverrides( {
-            @AttributeOverride(name="login", column = @Column(name="login") ),
-    })
-    private User user;
+    @Column(name = "login")
+    private String login;
 
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="wordId")
@@ -43,8 +41,8 @@ public class History {
     public History() {
     }
 
-    public History(User user, RepetitionMode mode, long addedDate, Word word, int repetitions, int successAttempts, double successRate, long lastRepeatDate) {
-        this.user = user;
+    public History(String login, RepetitionMode mode, long addedDate, Word word, int repetitions, int successAttempts, double successRate, long lastRepeatDate) {
+        this.login = login;
         this.repetitionMode = mode;
         this.addedDate = addedDate;
         this.word = word;
@@ -62,12 +60,12 @@ public class History {
         this.historyId = historyId;
     }
 
-    public User getUser() {
-        return user;
+    public String getLogin() {
+        return login;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public Word getWord() {
@@ -135,7 +133,7 @@ public class History {
                 ", successRate=" + successRate +
                 ", lastRepeatDate=" + lastRepeatDate +
                 ", addedDate=" + addedDate +
-                ", user=" + user +
+                ", login=" + login +
                 ", repetitionMode=" + repetitionMode +
                 ", historyId=" + historyId +
                 '}';

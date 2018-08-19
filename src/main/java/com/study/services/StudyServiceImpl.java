@@ -154,7 +154,7 @@ class StudyServiceImpl implements StudyServiceInterface {
 
             for (User user : userRepository.findAll()) {
                 for (RepetitionMode repetitionMode: RepetitionMode.values()) {
-                    History history = new History(user, repetitionMode,
+                    History history = new History(user.getLogin(), repetitionMode,
                             System.currentTimeMillis(), newWord, 0, 0, 0, 0);
                     LOG.info("Word: {} will be saved to user: {} history", newWord, user);
                     historyRepository.save(history);
@@ -195,7 +195,7 @@ class StudyServiceImpl implements StudyServiceInterface {
         wordHistory.setLastRepeatDate(currentTimestamp);
         wordHistory.setRepetitions(wordHistory.getRepetitions() + 1);
 
-        attempt.setUser(currentUser);
+        attempt.setLogin(currentUser.getLogin());
         attempt.setTs(currentTimestamp);
         attempt.setWord(originalWord);
 
@@ -259,7 +259,7 @@ class StudyServiceImpl implements StudyServiceInterface {
 
     @Override
     public User getCurrentUser() {
-        return userRepository.findByUsername(getAuthorizedUser().getUsername());
+        return userRepository.findByLogin(getAuthorizedUser().getUsername());
     }
 
 

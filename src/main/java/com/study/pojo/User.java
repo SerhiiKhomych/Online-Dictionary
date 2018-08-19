@@ -13,7 +13,7 @@ public class User {
     private Profile profile;
     private RepetitionMode repetitionMode;
 
-    Set<Category> categories;
+    private Set<Category> categories;
 
     public User() {
     }

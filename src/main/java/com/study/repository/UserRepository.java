@@ -6,6 +6,6 @@ import java.util.Set;
 
 public interface UserRepository {
     Set<User> findAll();
-    User findByUsername(String username);
+    User findByLogin(String login);
     void save(User user);
 }

@@ -26,6 +26,6 @@ public interface AttemptRepository extends JpaRepository<Attempt, Long> {
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM Attempt a WHERE a.user.login = :login and a.word.wordId = :wordId")
+    @Query("DELETE FROM Attempt a WHERE a.login = :login and a.word.wordId = :wordId")
     void delete(@Param("wordId") long wordId, @Param("login") String login);
 }

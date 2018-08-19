@@ -11,11 +11,8 @@ public class Attempt {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long attemptId;
 
-
-    @AttributeOverrides( {
-            @AttributeOverride(name="login", column = @Column(name="login") ),
-    })
-    private User user;
+    @Column(name = "login")
+    private String login;
 
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="wordId")
@@ -36,12 +33,12 @@ public class Attempt {
         this.attemptId = attemptId;
     }
 
-    public User getUser() {
-        return user;
+    public String getLogin() {
+        return login;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public Word getWord() {
