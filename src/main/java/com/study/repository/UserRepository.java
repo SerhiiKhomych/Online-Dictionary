@@ -1,7 +1,11 @@
 package com.study.repository;
 
 import com.study.pojo.User;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, String> {
+import java.util.Set;
+
+public interface UserRepository {
+    Set<User> findAll();
+    User findByUsername(String username);
+    void save(User user);
 }

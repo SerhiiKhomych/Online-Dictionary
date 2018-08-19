@@ -5,28 +5,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity(name = "App_user")
 public class User {
-    @Id
-    @JsonIgnore
     private String login;
-
     @JsonIgnore
     private String password;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name="name")
     private Profile profile;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "repetition_mode")
     private RepetitionMode repetitionMode;
 
-    @JsonIgnore
-    @ElementCollection(targetClass=Category.class, fetch = FetchType.EAGER)
-    @Enumerated(EnumType.STRING)
-    @CollectionTable(name="user_categories")
-    @Column(name="category")
     Set<Category> categories;
 
     public User() {

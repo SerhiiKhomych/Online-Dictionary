@@ -259,7 +259,7 @@ class StudyServiceImpl implements StudyServiceInterface {
 
     @Override
     public User getCurrentUser() {
-        return userRepository.findById(getAuthorizedUser().getUsername()).get();
+        return userRepository.findByUsername(getAuthorizedUser().getUsername());
     }
 
 
