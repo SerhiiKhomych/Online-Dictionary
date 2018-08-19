@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../resources/js/profile.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="mobile.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="../resources/css/mobile.css" />
     <link rel="stylesheet" media="only screen and (min-width: 761px)" href="../resources/css/main.css" />
 </head>
 <body class="centered-wrapper">

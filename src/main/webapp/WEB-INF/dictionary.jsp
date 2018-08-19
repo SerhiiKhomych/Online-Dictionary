@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.4/themes/redmond/jquery-ui.css" />
     <script src="../resources/js/dictionary.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="mobile.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="../resources/css/mobile.css" />
     <link rel="stylesheet" media="only screen and (min-width: 761px)" href="../resources/css/main.css" />
 </head>
 <body class="centered-wrapper">

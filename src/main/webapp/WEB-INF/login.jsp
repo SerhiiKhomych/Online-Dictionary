@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="../resources/css/main.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="../resources/css/mobile.css" />
     <link rel="stylesheet" media="only screen and (min-width: 761px)" href="../resources/css/main.css" />
 </head>
 <body class="centered-wrapper">

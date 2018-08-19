@@ -4,14 +4,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../resources/js/study.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="mobile.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 760px)" href="../resources/css/mobile.css" />
     <link rel="stylesheet" media="only screen and (min-width: 761px)" href="../resources/css/main.css" />
 </head>
 <body class="centered-wrapper">
     <div id="tittle" class="tittle">English UP</div>
     <nav id="menu" role='navigation'>
         <ul>
-
             <li><a href="/study">start</a></li>
             <li><a href="/profile">profile</a></li>
             <li><a href="/dictionary">dictionary</a></li>
