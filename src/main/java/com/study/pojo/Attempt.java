@@ -11,8 +11,10 @@ public class Attempt {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long attemptId;
 
-    @OneToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name="login")
+
+    @AttributeOverrides( {
+            @AttributeOverride(name="login", column = @Column(name="login") ),
+    })
     private User user;
 
     @OneToOne(fetch= FetchType.LAZY)
