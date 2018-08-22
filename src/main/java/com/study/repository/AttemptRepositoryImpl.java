@@ -11,9 +11,9 @@ import java.util.*;
 public class AttemptRepositoryImpl implements AttemptRepository{
     private  Map<User, List<Attempt>> userAttempts = new HashMap<>();
 
-    public Attempt findLastAttempt(User user) {
+    public Attempt findSecondLastAttempt(User user) {
         List<Attempt> attempts = userAttempts.get(user);
-        return (attempts == null) ? null : attempts.get(attempts.size() - 1);
+        return (attempts == null) ? null : attempts.get(0);
     }
 
     public void save(Attempt attempt) {

@@ -72,7 +72,7 @@ function studyWordWithAttempt() {
             setTimeout(function () {
                 replaceDiv();
                 getWord();
-            }, 400);
+            }, 100);
         },
         error: function (jqXHR, status) {
         }

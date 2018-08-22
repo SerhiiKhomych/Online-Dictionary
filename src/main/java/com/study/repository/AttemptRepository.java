@@ -6,7 +6,7 @@ import com.study.pojo.Word;
 
 public interface AttemptRepository{
 
-    Attempt findLastAttempt(User user);
+    Attempt findSecondLastAttempt(User user);
 
     void save(Attempt attempt);
 
