@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
+.menu {
+    display: none;
+}
+
 .tittle {
     color: white;
     text-shadow:

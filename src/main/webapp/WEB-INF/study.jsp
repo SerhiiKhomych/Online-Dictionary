@@ -9,7 +9,7 @@
 </head>
 <body class="centered-wrapper">
     <div id="tittle" class="tittle">English UP</div>
-    <nav id="menu" role='navigation'>
+    <nav id="menu" class="menu" role='navigation'>
         <ul>
             <li><a href="/study">start</a></li>
             <li><a href="/profile">profile</a></li>
