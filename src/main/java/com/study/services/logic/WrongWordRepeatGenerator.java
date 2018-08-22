@@ -23,11 +23,11 @@ public class WrongWordRepeatGenerator implements WordGeneratingInterface {
     @Override
     public Word getWord(User user) {
         LOG.info("Try to find last attempt");
-        Attempt attempt = attemptRepository.findLastAttempt(user.getLogin());
+        Attempt attempt = attemptRepository.findLastAttempt(user);
         LOG.info("Last attempt found: {} ", attempt);
 
-        if (!attempt.isSuccess()) {
-            return attemptRepository.getOneWithWord(attempt.getAttemptId()).getWord();
+        if (attempt != null && !attempt.isSuccess()) {
+            return attempt.getWord();
         } else {
             return successRateRepeatGenerator.getWord(user);
         }

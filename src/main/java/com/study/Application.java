@@ -36,9 +36,9 @@ public class Application extends SpringBootServletInitializer {
             userRepository.save(serhii);
 
             User oksana = new User("oksana", "oksana123");
-            serhii.setProfile(Profile.WRONG_WORD_REPEAT_GENERATOR);
-            serhii.setRepetitionMode(RepetitionMode.ENG_UA);
-            serhii.setCategories(Collections.singleton(Category.COMMON));
+            oksana.setProfile(Profile.WRONG_WORD_REPEAT_GENERATOR);
+            oksana.setRepetitionMode(RepetitionMode.ENG_UA);
+            oksana.setCategories(Collections.singleton(Category.COMMON));
             userRepository.save(oksana);
         };
     }

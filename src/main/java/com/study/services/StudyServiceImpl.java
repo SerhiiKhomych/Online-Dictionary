@@ -100,7 +100,7 @@ class StudyServiceImpl implements StudyServiceInterface {
                 LOG.info("Word: {} was deleted from history of user: {}", foundWord, user);
 
                 LOG.info("Word: {} will be deleted from attempts of user: {}", foundWord, user);
-                attemptRepository.delete(foundWord.getWordId(), user.getLogin());
+                attemptRepository.delete(foundWord, user);
                 LOG.info("Word: {} was deleted from attempts of user: {}", foundWord, user);
             }
 
@@ -195,7 +195,7 @@ class StudyServiceImpl implements StudyServiceInterface {
         wordHistory.setLastRepeatDate(currentTimestamp);
         wordHistory.setRepetitions(wordHistory.getRepetitions() + 1);
 
-        attempt.setLogin(currentUser.getLogin());
+        attempt.setUser(currentUser);
         attempt.setTs(currentTimestamp);
         attempt.setWord(originalWord);
 

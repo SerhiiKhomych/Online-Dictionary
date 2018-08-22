@@ -2,10 +2,9 @@ package com.study.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
-@Embeddable
 public class User {
     private String login;
     @JsonIgnore
@@ -61,6 +60,19 @@ public class User {
 
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(login, user.login);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(login);
     }
 
     @Override
