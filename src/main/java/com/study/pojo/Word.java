@@ -73,7 +73,7 @@ public class Word implements Comparable<Word>{
     private static List<String> replaceSpacesInTheEnd(String[] words) {
         List<String> result = new ArrayList<>();
         for (String word : words) {
-            result.add(word.trim());
+            result.add(word.trim().toLowerCase());
         }
         return result;
     }

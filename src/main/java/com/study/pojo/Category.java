@@ -2,9 +2,7 @@ package com.study.pojo;
 
 public enum Category {
     COMMON("common"),
-    SUITS("suits"),
-    HOUSE_OF_THE_CARDS("house of the cards"),
-    FINANCIER("financier");
+    DEUTSCH("deutsch");
 
     private String name;
 
