@@ -108,7 +108,7 @@ public class SubtitlesParser implements SubtitlesParserInterface{
                 @Override
                 public Word call() throws Exception {
                     String translation = callUrlAndParseResult(EN_LANGUAGE, UA_LANGUAGE, word);
-                    return new Word(word, translation, false, Category.SUITS);
+                    return new Word(word, translation, false, Category.COMMON);
                 }
             }));
         }
