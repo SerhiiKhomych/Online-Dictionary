@@ -4,6 +4,6 @@
     <title>Paris Quest</title>
 </head>
 <body class="centered-wrapper">
-    <img id="smile" src="../resources/map.png" >
+    <img id="smile" src="../resources/map.png" style="width:100%">
 </body>
 </html>
