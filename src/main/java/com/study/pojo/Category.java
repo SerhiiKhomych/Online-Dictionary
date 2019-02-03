@@ -1,8 +1,7 @@
 package com.study.pojo;
 
 public enum Category {
-    COMMON("common"),
-    DEUTSCH("deutsch");
+    COMMON("common");
 
     private String name;
 

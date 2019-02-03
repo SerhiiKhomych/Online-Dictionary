@@ -1,10 +1,7 @@
 $(function() {
 
     var categories = [
-        { category: "COMMON" },
-        { category: "HOUSE_OF_THE_CARDS" },
-        { category: "SUITS" },
-        { category: "FINANCIER" }
+        { category: "COMMON" }
     ];
 
     var rowSize = Math.ceil($(document).width() / 130);
