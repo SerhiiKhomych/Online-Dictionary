@@ -95,7 +95,7 @@
 
 <profiles>
     <profile>
-     <id>openshift</id>
+     <id>openshift1</id>
         <build>
             <finalName>ROOT</finalName>
             <plugins>
