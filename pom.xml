@@ -110,10 +110,6 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>com.heroku.sdk</groupId>
-                    <artifactId>heroku-maven-plugin</artifactId>
-                </plugin>
-                <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                 </plugin>
@@ -129,7 +125,7 @@
                                     <artifactItem>
                                         <groupId>com.github.jsimone</groupId>
                                         <artifactId>webapp-runner</artifactId>
-                                        <version>9.0.13.0</version>
+                                        <version>9.0.11.0</version>
                                         <destFileName>webapp-runner.jar</destFileName>
                                     </artifactItem>
                                 </artifactItems>
